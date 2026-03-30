@@ -1,0 +1,7 @@
+A vulnerabilidade desta aplicação reside em dois fatores principais, primeiro 
+a aplicação possui um sistema de Rate Limit por IP, mas este pode facilmente ser manipulado alterando o cabeçalho
+X-Forwarded-For: 
+Este cabeçalho representa basicamente o Ip de origem da requisição, que deve ser usado como proposito principal para logs
+e nao para tomar decisões, ao criar uma lista com 100 ips 127.0.0.1...127.0.0.100 e testar senhas com tamanho muito grande
+eventualmente um dos usuários -> athena Teve um tempo de resposta muito maior do que os outros, e dps utilizando a msm listade IP's e senhas
+a senha -> master retornou 302, me dando acesso a conta do usuario
