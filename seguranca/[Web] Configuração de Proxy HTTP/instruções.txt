@@ -1,0 +1,5 @@
+Instale, configure e utilize o Burp Suite Community (https://portswigger.net/burp/communitydownload). Realize e intercepte uma requisição para http://www.google.com (use screenshots para ilustrar o fato).
+
+Entregar em formato PDF.
+
+Tempo estimado de 30 minutos.

@@ -1,0 +1,27 @@
+Descreva o que acontece quando você clica no link https://cesar.school a partir do seu browser. Foque na diferença entre o que você descreveu no exercício "[Web] O que ocorre ao clicar em um link?" e o que aconteceria agora.
+
+No exercício anterior, iniciamos com http:// na porta 80. O navegador recebia um redirecionamento (301) para então ir para a porta segura.
+
+Ao clicar em um link que já começa com https://, o browser pula a fase de tentativa e inicia diretamente a comunicação na porta 443.
+
+
+Enquanto o HTTP opera diretamente sobre o TCP , o HTTPS introduz uma camada intermediária ->  TLS.
+
+
+Antes de enviar qualquer dado da página (como o GET para o HTML), o meu pc e o servidor da School realizam um acordo
+O servidor da School envia um Certificado Digital. O browser verifica se ele foi emitido por uma CA confiável.
+
+
+Diferente do exercício anterior onde os dados poderiam trafegar em texto plano, agora utilizamos a criptografia.
+
+O processo utiliza Criptografia Assimétrica para estabelecer uma conexão segura e, em seguida, troca para Criptografia Simétrica (usando a mesma chave secreta para ambos) para cifrar o tráfego de dados real, por ser mais performática.
+
+
+O processo de DNS permanece similar, mas com destinos diferentes:
+O navegador busca o IP associado ao domínio cesar.school no cache local ou via servidores de resolução.
+
+
+O servidor que responde pode utilizar um Balancer (balanceador de carga) para distribuir sua requisição entre múltiplos servidores da instituição.
+
+
+

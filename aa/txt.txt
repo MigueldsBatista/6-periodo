@@ -1,0 +1,33 @@
+1. Comportamento O(n)
+
+Melhor caso 1. Senha menor que 8 caracteres O(1)
+Melhor caso 2: Primeiro caractere da senha especial O(1)
+
+Big O (n)
+Theta (N/A) - Pois o melhor e pior caso são de ordem de grandeza diferentes
+
+Omega (1)
+
+2. Algoritmo tambem tem um crescimento linear pois so tem um loop
+
+- Aqui o melhor, pior e caso méido são iguais, pois o loop sempre vai executar N vezes independente do que tiver na entrada, logo
+
+Big O(n)
+Theta (n)
+Omega (n)
+
+
+3. O crescimento tambem é linear pois so tem um loop, sem condicionais
+Big O(n)
+Theta (n)
+Omega (n)
+
+4. Melhor caso quando o caractere alvo é atingido logo na primeira iteração Omega (1)
+
+Pior caso: O(N)
+
+Tetha (N/A) - Há um return dentro do loop. Como o limite inferior e o limite superior são diferentes, não existe um Theta único que descreva todos os cenários.
+
+5. O(log n) - a função tem crescimento logarítimico, visto que o limite do loop depende de uma divisão por 2 
+
+6. O(n² log n) - dois "for"(n²) e um "while" que dobra a cada passo, se aproximando do fim do loop(log n).

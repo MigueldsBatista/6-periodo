@@ -1,0 +1,30 @@
+Descreva o propósito dos atributos Domain, Path e SameSite no contexto de aplicações web.
+
+Formato da entrega: pdf.
+Tempo estimado: 30 minutos.
+
+O atributo Domain especifica qual servidor pode receber um cookie. Se especificado, os cookies ficam disponíveis no servidor indicado e em subdomínios. Por exemplo, se você definir Domain=mozilla.org a partir de mozilla.org, os cookies estarão disponíveis nesse domínio e em subdomínios como developer.mozilla.org.
+
+Se o atributo Domain não for especificado, os cookies ficam disponíveis apenas no servidor que os definiu, mas não em seus subdomínios. Um servidor só pode definir o atributo Domain para seu próprio domínio ou para um domínio pai, não para um subdomínio ou outro domínio. Assim, por exemplo, um servidor com domínio foo.example.com poderia definir o atributo como example.com ou foo.example.com, mas não como bar.foo.example.com ou elsewhere.com.
+
+O atributo Path indica um recurso que deve existir na URL solicitada para que o cabeçalho Cookie seja enviado. Por exemplo:
+
+Path=/api/users
+
+O caractere / é considerado um separador de diretório, e subdiretórios também correspondem. Por exemplo, se você definir Path=/users, esses caminhos tb seriam válidos:
+
+api/users/31
+api/users/31/details
+api/users/31/change_password
+
+O atributo SameSite permite que os servidores especifiquem se/quando os cookies são enviados em requisições entre sites (cookies de terceiros). Isso inclui requisições enviadas ao clicar em links de outros sites para navegar até o seu site, e qualquer requisição feita por conteúdo de terceiros incorporado.
+
+SameSite ajuda a evitar o vazamento de informações, preservando a privacidade do usuário e fornecendo alguma proteção contra CSRF. Ele aceita três valores possíveis: Strict, Lax e None:
+
+Strict faz com que o navegador envie o cookie apenas em respostas a requisições originadas do próprio site de origem do cookie. Deve ser usado para cookies relacionados a funcionalidades que sempre estarão atrás de uma navegação inicial, como autenticação ou armazenamento de informações do carrinho de compras.
+
+Lax é semelhante, exceto que o navegador também envia o cookie quando o usuário navega para o site de origem do cookie (mesmo vindo de outro site). Isso é útil para cookies que afetam a exibição de um site.
+
+None especifica que os cookies são enviados tanto em requisições originadas quanto em requisições entre sites. Por exemplo, para provedores de anúncios ou de análise. Se SameSite=None for definido, o atributo Secure também deve ser definido.
+
+Se nenhum atributo SameSite for definido, o cookie é tratado como Lax por padrão.

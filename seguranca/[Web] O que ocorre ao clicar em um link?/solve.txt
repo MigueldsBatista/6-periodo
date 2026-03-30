@@ -1,0 +1,40 @@
+Descreva, com o máximo de detalhes, o que ocorre no seu computador no momento em que você clica no link http://www.google.com
+
+Formato da entrega: PDF.
+Tempo estimado: 20 minutos.
+
+1. O sistema verifica se o IP do Google já está no cache local para evitar uma consulta
+externa.Seguindo a preferência,cache do browser -> cache da máquina -> cache da
+rede local -> cache do ISP -> serviço de resolução caso ainda não tenha sido
+encontrado
+
+2. O navegador checa possui uma cópia válida dos recursos (HTML, CSS, JS). Se houver
+um cabeçalho If-Modified-Since ou um ETag (identificador único de versão), o
+navegador pode fazer uma requisição condicional. Se o conteúdo não mudou, o
+servidor responde com um código 304 Not Modified, economizando banda.
+
+3. O link é http na porta 80. O servidor recebe a requisição e responde com um Status
+Code 301 Moved Permanently.Esta resposta contém o cabeçalho ‘Location’ instruindo o
+navegador a ir para a versão segura -> https://www.google.com (porta 443).
+
+4. As requisições em HTTPS vão usar TLS/SSL para garantir a criptografia e a integridade
+dos dados
+
+5. O navegador envia uma requisição formal -> Verbo GET, solicita o recurso principal. O
+cliente inclui o ‘User-Agent’ e o Host, ‘Cookies’: Se o site já foi visitado, o navegador
+anexa o cabeçalho Cookie. Isso permite que o servidor mantenha o seu estado
+(exemplo: sessionId)
+
+6. O servidor responde com um 200 OK e o corpo da página (HTML)
+
+7. O navegador lê o HTML e identifica novos links para arquivos CSS e JavaScript.
+
+8. Paralelismo: O navegador abre múltiplas conexões (ou usa conexões
+persistentes/pipelining) para baixar esses arquivos simultaneamente e acelerar o
+carregamento.
+
+9. Durante a execução do JavaScript, o navegador pode enviar dados de performance ou
+interação (telemetria) de volta aos servidores do Google via requisições assíncronas
+(como o método POST).
+
+10. Ao final do processo a página é carregada e o usuário pode navegar pelo conteúdo

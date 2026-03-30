@@ -1,0 +1,4 @@
+HttpOnly vs Secure Header
+a flag http only é utilizada somente para usar requisições HTTPS: FALSO
+HSTS
+SSL Striping

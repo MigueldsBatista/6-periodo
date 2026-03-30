@@ -1,0 +1,15 @@
+session_start
+
+se foi fornecido um cookie cujo nome é PHPSESSIONID
+
+Se sim:
+  Procura em mem pela existência do valor fornecido, caso encontre ela mapeia os valores previamente
+  preenchidos na variável global $_SESSION 
+
+
+Se não:
+  Ela cria um valor para o PHPSESSIONID e faz um Set-Cookie utilizando nome e valor gerado
+
+SESSION FIXATION ->
+Passou de uma sessão não autenticada para um autenticada e o token permaneceu o mesmo
+

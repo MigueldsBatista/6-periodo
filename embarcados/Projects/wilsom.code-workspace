@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../../PlatformIO/Projects/wilsom"
+		},
+		{
+			"name": "embarcados",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

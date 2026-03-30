@@ -1,0 +1,10 @@
+O que significa o protocolo HTTP ser stateless e como podemos manter estado em aplicações web?
+
+Tempo estimado: 15 minutos.
+Formato de entrega: PDF.
+
+
+Ausência de estado no protocolo http(stateless) significa que o protocolo não possui memória do que acontece entre as requisições, ou persistência de estado, cada requisição toda informação que for necessário para a requisição funcionar deve ser enviada, como por exemplo cabeçalhos, tokens de autenticação etc, para manter estado entre as requisições podemos utilizar os cookies, os cookies são persistidos no lado do cliente, e o serviro mantem o estado/sessão, também instrui o cliente em como guardar cookis usando o cabeçalho Set-Cookie, e o navegador envia os cookies nas requisições subsequentes usando o cabeçalho Cookie, podemos salvar informações como id da sessão, token de autenticação etc, todo cookie tem uma data de expiração e uma chave associada ao valor
+Alguns outros cabeçalhos importantes e relacionados são
+HttpOnly -> Este atributo impede que JS acesse o cookie.
+Secure -> cookie só é enviado se for HTTPS.
