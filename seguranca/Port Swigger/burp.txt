@@ -1,0 +1,4 @@
+canonical.html|academyLabHeader|success.txt|suggest|search
+
+Regex: true
+Negative: true

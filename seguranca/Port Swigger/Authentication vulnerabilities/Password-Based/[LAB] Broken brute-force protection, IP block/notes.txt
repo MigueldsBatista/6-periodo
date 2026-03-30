@@ -1,0 +1,16 @@
+A fraqueza aq está no fato que o mecanismo de IP block é resetado a cada tentativa correta de login pelo mesmo IP, ou seja, podemos montar primeiro uma lista de usuários
+que seria 
+
+wiener -> valido
+carlos
+carlos
+wiener -> para resetar o IP Block
+
+e para password vamos pegar a lista original e intercalar com as senhas válidas para que a cada 2 tentativas ele faça 1 login correto
+
+O burp nos auxilia com o Pitchfork attack
+(Allocate a payload set to each position. Intruder iterates through each set in parallel.)
+
+Após o resultado só precisamos verificar se houve alguma requisição com response code 302 para o usuário carlos e ver a senha utilizada -> princess
+
+Da pra resolver mais facil?

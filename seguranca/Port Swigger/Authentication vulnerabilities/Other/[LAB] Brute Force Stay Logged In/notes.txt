@@ -1,0 +1,3 @@
+A vulnerabilidade neste caso específico se enontra no fato de que apesar da aplicação bloquear o ip do usuário apos x tentativas, não existe um bloqueio para tentativas de ir para pagina do perfil do usuário, ao testar com nossas credenciais vi que era só passar o cookie de stay-logged-in, não precisava do session junto, e o cookie seguia um padrão previsível, logo olhando, testei decodificar como base64 e constatei que o cookie era composto por nome:md5(senha) e não era aplicado nenhum sal no processo de hash, logo usando a tabela de possiveis senhas facilmente conseguimos construir uma lista de possiveis senhas
+seguindo este mesmo padrao carlos:md5(senha) e eventualmente consegumos acertar a senha
+-> qwerty

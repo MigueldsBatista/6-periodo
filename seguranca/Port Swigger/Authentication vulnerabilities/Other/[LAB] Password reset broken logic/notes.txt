@@ -1,0 +1,10 @@
+Para passar por esse lab, basicamente precisamos olhar para como o request de password  reset é enviado
+basicamente ele contem um token para o reset de senha, mas esse token não parece verificar qual usuário está tentando
+realizar o reset de senha, então podemos usar nossa conta e clicar em reset password
+Como estamos usando burp suite ele vai parar a requisição que contém o payload vulneravel
+é so ver o nome de usuário que ele ta tentando resetar (no nosso caso wiener) e trocar para carlos
+que é quem queremos acessara conta
+
+isso acontece pois o mesmo token que é enviado para que o usuário acesse o formulário de reset password não é checado novamente quando o usuário
+clica para confirmar a alteração de senha 
+

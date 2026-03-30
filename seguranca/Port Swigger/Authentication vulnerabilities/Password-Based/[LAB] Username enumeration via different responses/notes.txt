@@ -1,0 +1,1 @@
+A vulnerabilidade da aplicação reside no fato que o ao inserir um usuário inexistente com senha inválida a aplicação simplismente response usuário inválido, mas ao inserir um usuário válido com senha inválida a aplicação responde senha inválida, com isso foi possível enumerar o usuário -> alabama

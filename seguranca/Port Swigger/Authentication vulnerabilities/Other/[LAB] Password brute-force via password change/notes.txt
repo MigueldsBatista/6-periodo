@@ -1,0 +1,2 @@
+A vulnerabilidade desta aplicação estava no fato que ao utilizar o mecanismo de troca de senha, a aplicação não verificava qual usuário estava tentando realizar a troca, apenas confiava no parêmetro username e se o token de sessão era válido (independente do usuário), para isso foi preciso apenas criar um macro que obtem um token de sessão válido e atualiza o Cookie session a cada tentativa de mudar a senha, eventualmente a uma requisição obteve 200
+para senha -> sunshine

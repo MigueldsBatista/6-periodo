@@ -1,0 +1,13 @@
+O calcanhar de aquiles do exercício consiste no fato que a aplicação permite
+manipular os parâmetros enviados na hora de mandar o password reset link
+tudo que precisamos fazer é ter acesso a um servidor de exploit
+e trocar o host original da aplicação pelo nosso servidor malicioso
+o exercício considera que carlos vai clicar em qualquer url no seu email
+entao como ela é gerada dinamicamente ela apareceria para ele como
+
+evil-user.net/forget_password?token='xpto...'
+
+O usuário clica e isso aparece no nosso servidor de logs
+
+Dúvida, melhor abordagem seria remover o token da url?
+
