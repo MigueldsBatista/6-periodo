@@ -49,7 +49,7 @@ def analyze_insertion():
         print(label)
         print(f"Tempo em ms: {tempo:2f}\n")
         
-def analyze_linear() -> int:
+def analyze_linear():
     SIZE = 1000
     arr = random_array(SIZE, 'ordered')
     
