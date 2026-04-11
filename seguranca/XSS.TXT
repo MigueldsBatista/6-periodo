@@ -1,0 +1,6 @@
+Xss Refletivo e Xss Persistido
+
+* Xss Refletivo é um tipo de vulnerabilidade de segurança em que um atacante injeta código malicioso em um site, e esse código é refletido de volta para o usuário sem ser devidamente sanitizado. Isso pode permitir que o atacante execute scripts maliciosos no navegador do usuário, roubando informações sensíveis ou realizando ações indesejadas.
+
+* Xss Persistido, por outro lado, é um tipo de vulnerabilidade em que o código malicioso é armazenado permanentemente em um banco de dados ou em um sistema de armazenamento do site. Quando um usuário acessa a página afetada, o código malicioso é executado automaticamente, sem a necessidade de interação do usuário. Isso pode ser especialmente perigoso, pois pode afetar um grande número de usuários e causar danos significativos.
+
